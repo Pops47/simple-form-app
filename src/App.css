@@ -17,21 +17,28 @@ h1 {
 .submit {
   padding-top: 2rem;
 }
-.submit input {
+.input {
   background-color: #5c47d3 !important;
+  width: 20rem;
   height: 2.5rem !important;
   color: white;
   font-weight: bold;
+  border-radius: 0.5rem;
 }
 .form input {
   width: 18rem;
   height: 2.5rem;
   background-color: #fcf9f9;
   border: solid lightgrey 1px;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
 }
 .grey-square {
   background-color: lightgrey;
+  width: 40%;
+  padding: 2rem;
+  border-radius: 5%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 .footer {
   width: 100%;

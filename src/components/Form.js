@@ -55,6 +55,7 @@ function Form({
       </div>
       <div className="submit">
         <input
+          className="input"
           type="submit"
           value="Register"
           onClick={() => {

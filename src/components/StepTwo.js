@@ -8,6 +8,7 @@ function StepTwo({ username, email, password, setIsFormValidate }) {
         <p>Pasword : {password}</p>
       </div>
       <button
+        className="input"
         onClick={() => {
           setIsFormValidate(false);
         }}

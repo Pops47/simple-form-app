@@ -9,6 +9,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [isFormValidate, setIsFormValidate] = useState(false);
 
   const handleNameChange = (event) => {
     const value = event.target.value;
@@ -28,9 +29,7 @@ function App() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(username, email, password);
   };
-  const [isFormValidate, setIsFormValidate] = useState(false);
 
   return (
     <div className="App">
