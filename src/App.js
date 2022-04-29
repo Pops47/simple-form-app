@@ -29,6 +29,11 @@ function App() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (password !== confirmPassword) {
+      alert("Les mots de passe ne sont pas identiques");
+    } else {
+      setIsFormValidate(true);
+    }
   };
 
   return (
@@ -39,7 +44,6 @@ function App() {
           email={email}
           password={password}
           confirmPassword={confirmPassword}
-          setIsFormValidate={setIsFormValidate}
           handleNameChange={handleNameChange}
           handleEmailChange={handleEmailChange}
           handlePasswordChange={handlePasswordChange}

@@ -3,7 +3,6 @@ function Form({
   email,
   password,
   confirmPassword,
-  setIsFormValidate,
   handleSubmit,
   handleNameChange,
   handleEmailChange,
@@ -54,21 +53,7 @@ function Form({
         />
       </div>
       <div className="submit">
-        <input
-          className="input"
-          type="submit"
-          value="Register"
-          onClick={() => {
-            username === "" ||
-            email === "" ||
-            password === "" ||
-            confirmPassword === ""
-              ? alert("Veuillez remplir tous les champs")
-              : password !== confirmPassword
-              ? alert("Les mots de passe ne sont pas identiques")
-              : setIsFormValidate(true);
-          }}
-        />
+        <input className="input" type="submit" value="Register" />
       </div>
     </form>
   );
