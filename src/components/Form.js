@@ -4,10 +4,10 @@ function Form({
   password,
   confirmPassword,
   handleSubmit,
-  handleNameChange,
-  handleEmailChange,
-  handlePasswordChange,
-  handleConfirmPasswordChange,
+  setName,
+  setEmail,
+  setPassword,
+  setConfirmPassword,
 }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -19,7 +19,10 @@ function Form({
           placeholder="Name"
           name="username"
           value={username}
-          onChange={handleNameChange}
+          onChange={(event) => {
+            const value = event.target.value;
+            setName(value);
+          }}
         />
       </div>
       <div>
@@ -29,7 +32,10 @@ function Form({
           placeholder="Email"
           name="email"
           value={email}
-          onChange={handleEmailChange}
+          onChange={(event) => {
+            const value = event.target.value;
+            setEmail(value);
+          }}
         />
       </div>
       <div>
@@ -39,7 +45,10 @@ function Form({
           placeholder="Password"
           name="password"
           value={password}
-          onChange={handlePasswordChange}
+          onChange={(event) => {
+            const value = event.target.value;
+            setPassword(value);
+          }}
         />
       </div>
       <div>
@@ -49,7 +58,10 @@ function Form({
           placeholder="Confirm your Password"
           name="confirmPassword"
           value={confirmPassword}
-          onChange={handleConfirmPasswordChange}
+          onChange={(event) => {
+            const value = event.target.value;
+            setConfirmPassword(value);
+          }}
         />
       </div>
       <div className="submit">

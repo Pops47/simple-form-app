@@ -11,22 +11,6 @@ function App() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isFormValidate, setIsFormValidate] = useState(false);
 
-  const handleNameChange = (event) => {
-    const value = event.target.value;
-    setName(value);
-  };
-  const handleEmailChange = (event) => {
-    const value = event.target.value;
-    setEmail(value);
-  };
-  const handlePasswordChange = (event) => {
-    const value = event.target.value;
-    setPassword(value);
-  };
-  const handleConfirmPasswordChange = (event) => {
-    const value = event.target.value;
-    setConfirmPassword(value);
-  };
   const handleSubmit = (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
@@ -44,10 +28,10 @@ function App() {
           email={email}
           password={password}
           confirmPassword={confirmPassword}
-          handleNameChange={handleNameChange}
-          handleEmailChange={handleEmailChange}
-          handlePasswordChange={handlePasswordChange}
-          handleConfirmPasswordChange={handleConfirmPasswordChange}
+          setName={setName}
+          setEmail={setEmail}
+          setPassword={setPassword}
+          setConfirmPassword={setConfirmPassword}
           handleSubmit={handleSubmit}
         />
       ) : (
